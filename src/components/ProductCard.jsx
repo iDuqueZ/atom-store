@@ -9,7 +9,7 @@ const ProductCard = ({ img, name, price, link }) => {
             src={img}
             alt="Imagen"
             height="200px"
-            className="w-full aspect-[3/4] object-cover rounded-lg overflow-hidden border dark:border-gray-800"
+            className="w-full aspect-[3/4] object-cover rounded-lg rounded-b-none overflow-hidden border dark:border-gray-800"
           />
         </a>
         <div className="grid gap-1 px-1">
@@ -23,7 +23,7 @@ const ProductCard = ({ img, name, price, link }) => {
           <a
             href={link}
             style={{textDecoration: "none"}}
-            className="bg-black text-white text-center py-2 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-800 transition-colors duration-300 ease-out border-t-0"
+            className="bg-black text-white text-center py-2 rounded-lg rounded-t-none hover:bg-gray-800 dark:hover:bg-gray-800 transition-colors duration-300 ease-out"
           >
             Ver producto
           </a>
