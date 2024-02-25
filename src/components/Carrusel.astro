@@ -1,0 +1,31 @@
+---
+import { Carousel } from 'astro-bootstrap';
+import type { CarouselSlideType } from 'astro-bootstrap';
+const slides: CarouselSlideType[] = [
+  { img: '/img/1.jpg', alt: 'First placeholder', active: true },
+  { img: '/img/2.jpg', alt: 'Second placeholder' },
+  { img: '/img/3.jpg', alt: 'Third placeholder' },
+  { img: '/img/4.jpg', alt: 'Fourth placeholder' }
+];
+
+const id = 'carouselExampleBasic';
+---
+<div class="max-h-[450px]">
+    <Carousel {id} fade>
+      <Carousel.Indicators {id} {slides} />
+      <Carousel.Inner>
+        {
+          slides.map((slide) => (
+            <Carousel.Item active={slide.active}>
+              <img
+                src={slide.img}
+                class="d-block w-100 object-cover h-[450px]"
+                alt={slide.alt}
+              />
+            </Carousel.Item>
+          ))
+        }
+      </Carousel.Inner>
+      <Carousel.Controls id={id} />
+    </Carousel>
+</div>

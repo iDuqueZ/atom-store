@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Camiseta Samurai",
+      "img": "https://i.ibb.co/KwLgy8S/Samurai-mockup.png",
+      "price": 19.99,
+      "link": "https://example.com/camiseta-blanca"
+    },
+    {
+      "name": "Camiseta nina japonesa",
+      "img": "https://i.ibb.co/3By7yJx/ni-a-japonesa-mockup.png",
+      "price": 24.99,
+      "link": "https://example.com/camiseta-floral"
+    },
+    {
+      "name": "Camiseta Samurai Negra",
+      "img": "https://i.ibb.co/Z6k13ZH/logo-samurai-mockup.png",
+      "price": 29.99,
+      "link": "https://example.com/camiseta-negra"
+    },
+    {
+      "name": "Camiseta Samu kata",
+      "img": "https://i.ibb.co/cXZTRnr/logo-japones-mockup.png",
+      "price": 34.99,
+      "link": "https://example.com/camiseta-rayada"
+    },
+    {
+      "name": "Camiseta Vintage Gris",
+      "img": "https://i.ibb.co/f2yC5fJ/japones-mockup.png",
+      "price": 27.99,
+      "link": "https://example.com/camiseta-gris"
+    },
+    {
+        "name": "Camiseta nina japonesa",
+        "img": "https://i.ibb.co/3By7yJx/ni-a-japonesa-mockup.png",
+        "price": 24.99,
+        "link": "https://example.com/camiseta-floral"
+      }
+  ]
+  

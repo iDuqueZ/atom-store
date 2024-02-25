@@ -1,0 +1,39 @@
+---
+interface Props {
+  name: string,
+  img: string,
+  price: number,
+  link: string
+}
+
+const { name, img, price, link } = Astro.props;
+
+---
+
+
+<div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+    <div class="grid gap-2">
+      <a class="inline-block w-full" href="#">
+        <img
+          src={img}
+          alt="Thumbnail"
+          width="200"
+          height="300"
+          class="aspect-[3/4] object-cover rounded-lg overflow-hidden border dark:border-gray-800"
+        />
+        <span class="sr-only">View Product</span>
+      </a>
+      <div class="grid gap-1.5">
+        <a class="text-base font-semibold hover:underline dark:hover:underline-none" href="#">
+          {name}
+        </a>
+        <p class="text-xs leading-none">{name}</p>
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <div class="font-semibold text-base">{price}</div>
+        <a href={link} class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3">
+          View
+        </a>
+      </div>
+    </div>
+  </div>

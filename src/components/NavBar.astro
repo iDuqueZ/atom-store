@@ -1,0 +1,92 @@
+---
+
+---
+
+<header class="shadow-sm fixed w-full bg-white top-0 z-50">
+    <nav
+      class="max-w-screen-xl h-16 flex flex-row mx-auto px-5 justify-between items-center"
+    >
+      <div class="logo">
+        <a href="/">
+          <img
+            src="/logo-atom.svg"
+            width="80px"
+            height="40px"
+            alt="Logo de Atom"
+          />
+        </a>
+        <!-- <span class="text-2xl font-bold text-zinc-800">ATOM</span> -->
+      </div>
+
+  
+      <!-- Menu para moviles -->
+      <div class="menu-icon md:hidden">
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </div>
+  
+      <!-- Menu desplegable -->
+      <ul
+        class="absolute top-16 left-0 p-5 rounded-b-md w-full flex flex-col gap-4 shadow-lg hidden md:hidden"
+      >
+        <li><a class="hover:text-teal-600" href="/">Inicio</a></li>
+        <li><a class="hover:text-teal-600" href="/about">Nosotros</a></li>
+        <li><a class="hover:text-teal-600" href="/blog">Catalogo</a></li>
+      </ul>
+  
+      <!-- Menu para escritorio -->
+      <ul class="flex gap-6 mb-0 hidden md:flex h-full items-center">
+        <li class="h-full">
+          <a
+            class="h-full items-center flex hover:text-teal-600 hover:border-b-4 hover:border-teal-600 hover: text-zinc-800"
+            href="/">Inicio</a>
+        </li>
+        <li class="h-full">
+          <a
+            class="h-full items-center flex hover:text-teal-600 hover:border-b-4 hover:border-teal-600 hover: text-zinc-800"
+            href="/about">Nosotros</a>
+        </li>
+        <li class="h-full">
+          <a
+            class="h-full items-center flex hover:text-teal-600 hover:border-b-4 hover:border-teal-600 hover: text-zinc-800"
+            href="/blog">Catalogo</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <style>
+
+    a{
+        text-decoration: none;
+    }
+
+    ul li a {
+      transition: 0.5s;
+    }
+  
+    ul li a:hover {
+      color: rgb(45 212 191);
+      /* box-shadow: 0 0 5px #ffee10; */
+      text-shadow: 0 0 1px rgb(13 148 136);
+    }
+  </style>
+  
+  <script>
+    const menuIcon = document.querySelector(".menu-icon");
+    const menu = document.querySelector("ul");
+  
+    menuIcon.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
