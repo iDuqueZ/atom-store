@@ -58,7 +58,9 @@ import Footer from "../components/Footer.astro";
           "telephone": "+57-312-640-1748",
           "contactType": "Servicio al cliente"
         },
-        "sameAs": ["https://www.instagram.com/atomstore_co?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="],
+        "sameAs": [
+          "https://www.instagram.com/atomstore_co?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        ],
         "breadcrumb": {
           "@type": "BreadcrumbList",
           "itemListElement": [
@@ -90,6 +92,20 @@ import Footer from "../components/Footer.astro";
         }
       }
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-081TYNY0K0"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-081TYNY0K0");
+    </script>
+
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
