@@ -9,7 +9,7 @@ const ProductCard = ({ img, name, price, link }) => {
             src={img}
             alt="Imagen"
             height="200px"
-            className="w-full aspect-[3/4] object-cover rounded-lg rounded-b-none overflow-hidden border dark:border-gray-800"
+            className="w-full aspect-[3/4] object-cover rounded-lg rounded-b-none overflow-hidden border dark:border-gray-800 lazyload transition-all duration-300 ease-out"
           />
         </a>
         <div className="grid gap-1 px-1">

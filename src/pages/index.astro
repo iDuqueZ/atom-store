@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Carrusel from '../components/Carrusel.astro';
-import Vitrina from '../components/Vitrina.jsx';
+import Vitrina from '../components/UltimaColecion.jsx';
 ---
 
 <Layout title="ATOM STORE | TIENDA Y ESTAMPADO DE CAMISETAS">
@@ -9,10 +9,34 @@ import Vitrina from '../components/Vitrina.jsx';
 		<Carrusel />
 
 		<section class="p-4 max-w-screen-xl mx-auto">
-			<h2 class="text-2xl text-zinc-700 my-4">Novedades ✨</h1>
+			<h2 class="text-2xl text-zinc-700 my-4">Lo Ultimo en Coleción ✨</h2>
 			<Vitrina client:load/>
+		</section>
+
+		<section class="p-4 max-w-screen-xl mx-auto">
+			<!-- Anuncio personaliza tu camiseta -->
+			<div class="p-10 text-right">
+				<h2 class="text-2xl text-zinc-700 my-4">Personaliza tu camiseta</h2>
+				<p class="text-zinc-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<button class="bg-zinc-500 text-white px-4 py-2 rounded-md mt-4">Personalizar</button>
+			</div>
+		</section>
+
+		<section class="p-4 max-w-screen-xl mx-auto">
+			<h2 class="text-2xl text-zinc-700 my-4">Lo Más Vendido 🔥</h2>
+			<Vitrina client:load/>
+		</section>
+
+		<section class="p-4 max-w-screen-xl mx-auto">
+			<!-- Anuncio de envio gratis -->
+			<div class="p-10 text-left">
+				<h2 class="text-2xl text-zinc-700 my-4">Envio Gratis</h2>
+				<p class="text-zinc-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<button class="bg-zinc-500 text-white px-4 py-2 rounded-md mt-4">Ver mas</button>
+			</div>
 		</section>
 	</main>
 </Layout>
 
 
+../components/UltimaColecion.jsx

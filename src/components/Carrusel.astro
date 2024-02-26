@@ -10,7 +10,7 @@ const slides: CarouselSlideType[] = [
 
 const id = 'carouselExampleBasic';
 ---
-<div class="max-h-[450px]">
+<div class="max-h-[60vh]">
     <Carousel {id} fade>
       <Carousel.Indicators {id} {slides} />
       <Carousel.Inner>
@@ -19,7 +19,7 @@ const id = 'carouselExampleBasic';
             <Carousel.Item active={slide.active}>
               <img
                 src={slide.img}
-                class="d-block w-100 object-cover h-[450px]"
+                class="d-block w-100 object-cover h-[60vh] aspect-video"
                 alt={slide.alt}
               />
             </Carousel.Item>

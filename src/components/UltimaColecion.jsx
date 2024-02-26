@@ -9,7 +9,7 @@ import ProductCard from './ProductCard.jsx';
 import '../styles/custom.css';
 
 //Importamos Datos
-import data from '../data/Productos.json';
+import data from '../data/UltimaColecion.json';
 
 const products = data;
 
@@ -65,7 +65,7 @@ export default function App() {
     <>
       <Swiper
         slidesPerView={1}
-        spaceBetween={20}
+        spaceBetween={5}
         loop={true}
         navigation={true}
         breakpoints={{
