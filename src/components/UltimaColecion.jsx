@@ -9,9 +9,7 @@ import ProductCard from './ProductCard.jsx';
 import '../styles/custom.css';
 
 //Importamos Datos/
-
-// Token de consulta
-const apiKey = 'patZjc6MSnZX1U7xD.6a41d62d8416a0b43993fab2b8706f2d6d0c1ea2b287c791efb3eccfa8b2be3c';
+const apiKey = import.meta.env.PUBLIC_API_TOKEN;
 
 const apiUrl = 'https://api.airtable.com/v0/appnnjkfOvvg37Pvz/Ultima-coleccion?view=Ultima-coleccion';
 
