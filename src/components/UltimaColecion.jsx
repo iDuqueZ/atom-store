@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -40,43 +41,73 @@ export default function App() {
     return null; // O muestra un mensaje de error, o devuelve algo según tu necesidad
   }
 
-  return (
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (products.length > 0) {
+      setLoading(false);
+    }
+  }, []);
+
+  const loader = () => {
+    return (
     <>
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={5}
-        loop={true}
-        navigation={true}
-        breakpoints={{
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 50,
-          },
-        }}
-        modules={[Navigation]}
-        className="mySwiper"
-      >
-        {products.map((product) => (
-          <SwiperSlide>
-            <div className=''>
-              <ProductCard
-                img={product.img}
-                name={product.name}
-                price={product.price}
-                link={product.link}
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className='grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5'>
+        {/* // aqui van los skeleton loaders */}
+        <div className="animate-pulse bg-gray-300 h-96 w-60"></div>
+        <div className="animate-pulse bg-gray-300 h-96 w-60"></div>
+        <div className="animate-pulse bg-gray-300 h-96 w-60"></div>
+        <div className="animate-pulse bg-gray-300 h-96 w-60"></div>
+        <div className="animate-pulse bg-gray-300 h-96 w-60"></div>
+      </div>  
     </>
-  );
+    );
+  }
+
+  if (loading) {
+    return loader();
+  }else{
+    return (
+      <>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={5}
+          loop={true}
+          navigation={true}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
+          }}
+          modules={[Navigation]}
+          className="mySwiper"
+        >
+          {products.map((product) => (
+            <div className='md:max-h-500px'>
+            <SwiperSlide>
+              <div className=''>
+                <ProductCard
+                  img={product.img}
+                  name={product.name}
+                  price={product.price}
+                  link={product.link}
+                />
+              </div>
+            </SwiperSlide>
+            </div>
+          ))}
+        </Swiper>
+      </>
+    );
+  }
 }
