@@ -22,8 +22,6 @@ const dataReq = await fetch(apiUrl, {
 
 const responseData = await dataReq.json();
 
-console.log(responseData);
-
 
 export default function App() {
 

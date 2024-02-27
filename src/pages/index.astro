@@ -1,12 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Carrusel from '../components/Carrusel.astro';
+import CarruselMobile from '../components/CarruselMobile.astro';
 import Vitrina from '../components/UltimaColecion.jsx';
 ---
 
 <Layout title="ATOM STORE | TIENDA Y ESTAMPADO DE CAMISETAS">
 	<main>
-		<Carrusel />
+		<div class="hidden md:block">
+			<Carrusel />
+		</div>
+		<div class="block md:hidden">
+			<CarruselMobile />
+		</div>
+		
 
 		<section class="p-4 max-w-screen-xl mx-auto">
 			<h2 class="text-2xl text-zinc-700 my-4">Lo Ultimo en Coleción ✨</h2>

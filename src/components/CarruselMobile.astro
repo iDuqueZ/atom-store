@@ -28,14 +28,14 @@ const responseData = await dataReq.json();
 
 
 const slides: CarouselSlideType[] = banners.map(banner => ({
-  img: banner.desktop, 
+  img: banner.mobile, 
   alt: banner.alt,
   active: banner.active
 }));
 
 console.log(slides);
 
-const id = 'carouselDesktop';
+const id = 'carouselMobile';
 ---
 <div class="max-h-[60vh]">
     <Carousel {id} fade>
