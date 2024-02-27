@@ -7,6 +7,7 @@ const ProductCard = ({ img, name, price, link }) => {
         <a className="inline-block w-full" href="#">
           <img
             src={img}
+            loading="lazy"
             alt="Imagen"
             height="200px"
             className="w-full aspect-[3/4] object-cover rounded-lg rounded-b-none overflow-hidden border dark:border-gray-800 lazyload transition-all duration-300 ease-out"

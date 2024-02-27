@@ -7,6 +7,8 @@ const { title } = Astro.props;
 
 import "bootstrap/dist/css/bootstrap.css";
 
+import { ViewTransitions } from 'astro:transitions';
+
 import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
 ---
@@ -109,7 +111,8 @@ import Footer from "../components/Footer.astro";
     </script>
 
     <title>{title}</title>
-  </head>
+    <ViewTransitions />
+  </head> 
   <body>
     <NavBar />
     <slot />

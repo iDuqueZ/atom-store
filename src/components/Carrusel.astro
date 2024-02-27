@@ -26,6 +26,16 @@ const responseData = await dataReq.json();
   // Asegúrate de que responseData.records es un array antes de mapearlo
   const banners = responseData.records.map(record => record.fields);
 
+  banners.map(banner => {
+
+    //Validar si tiene file
+    if (banner.file === undefined) {
+      console.error('El banner no tiene archivo');
+      return null; // O muestra un mensaje de error, o devuelve algo según tu necesidad
+    }
+
+    console.log (banner.file.map(file => file.url) ); 
+  })
 
 const slides: CarouselSlideType[] = banners.map(banner => ({
   img: banner.desktop, 
@@ -33,7 +43,6 @@ const slides: CarouselSlideType[] = banners.map(banner => ({
   active: banner.active
 }));
 
-console.log(slides);
 
 const id = 'carouselDesktop';
 ---
@@ -46,7 +55,8 @@ const id = 'carouselDesktop';
             <Carousel.Item active={slide.active}>
               <img
                 src={slide.img}
-                class="d-block w-100 object-cover h-[60vh] aspect-video"
+                loading="lazy"
+                class="d-block w-100 object-cover h-[60vh] aspect-videod"
                 alt={slide.alt}
               />
             </Carousel.Item>
