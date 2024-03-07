@@ -7,7 +7,7 @@ const { title } = Astro.props;
 
 import "bootstrap/dist/css/bootstrap.css";
 
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 
 import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
@@ -28,7 +28,10 @@ import Footer from "../components/Footer.astro";
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
  -->
     <!-- SEO -->
-    <meta name="google-site-verification" content="KK3nzbw3LLJrOr_DtYT-wwZpBBBTyQLOq2byo5tYHxw" />
+    <meta
+      name="google-site-verification"
+      content="KK3nzbw3LLJrOr_DtYT-wwZpBBBTyQLOq2byo5tYHxw"
+    />
     <meta
       name="description"
       content="Descubre en Atom Store las camisetas más trendy y exclusivas para jóvenes en Cali, Colombia. Explora nuestra colección de diseños únicos y personalizados que destacarán tu estilo. ¡Viste con actitud y originalidad! Envíos rápidos y seguros a tu puerta. ¡Haz una declaración de moda con Atom Store hoy!"
@@ -61,9 +64,7 @@ import Footer from "../components/Footer.astro";
           "telephone": "+57-312-640-1748",
           "contactType": "Servicio al cliente"
         },
-        "sameAs": [
-          "https://www.instagram.com/atomstore_co/"
-        ],
+        "sameAs": ["https://www.instagram.com/atomstore_co/"],
         "breadcrumb": {
           "@type": "BreadcrumbList",
           "itemListElement": [
@@ -111,7 +112,7 @@ import Footer from "../components/Footer.astro";
 
     <title>{title}</title>
     <ViewTransitions />
-  </head> 
+  </head>
   <body>
     <NavBar />
     <slot />
@@ -123,17 +124,36 @@ import Footer from "../components/Footer.astro";
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
-  </body>
-</html>
-<style is:global>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  </body><style is:global>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  a {
-    text-decoration: none;
-    color: black;
-  }
-</style>
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    ::-webkit-scrollbar {
+      border-radius: 10px;
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #242424;
+      background-clip: content-box;
+      border: 2px solid #0000;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+  </style>
+</html>

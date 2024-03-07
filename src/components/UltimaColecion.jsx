@@ -53,7 +53,7 @@ export default function App() {
   const loader = () => {
     return (
     <>
-      <div className='grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5'>
+      <div className='grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 animate-fade-in-up animate-delay-300 animate-duration-slow'>
         {/* // aqui van los skeleton loaders */}
         <div className="animate-pulse bg-gray-300 h-96 w-60"></div>
         <div className="animate-pulse bg-gray-300 h-96 w-60 hidden md:block"></div>
@@ -93,7 +93,7 @@ export default function App() {
           className="mySwiper"
         >
           {products.map((product) => (
-            <div className='md:max-h-500px'>
+            <div className='md:max-h-500px animate-fade-in-up animate-delay-300 animate-duration-slow'>
             <SwiperSlide>
               <div className=''>
                 <ProductCard

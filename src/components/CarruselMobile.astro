@@ -35,7 +35,7 @@ const slides: CarouselSlideType[] = banners.map(banner => ({
 
 const id = 'carouselMobile';
 ---
-<div class="max-h-[60vh]">
+<div class="max-h-[60vh] animate-fade-in-up animate-delay-300 animate-duration-slow">
     <Carousel {id} fade>
       <Carousel.Indicators {id} {slides} />
       <Carousel.Inner>
