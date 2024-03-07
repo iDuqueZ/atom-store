@@ -1,5 +1,6 @@
 ---
 import Ticker from './Ticker.astro'
+import MenuMobile from './MenuMobile.jsx'
 ---
 
 <header class="shadow-sm fixed w-full bg-white top-0 z-50">
@@ -20,30 +21,7 @@ import Ticker from './Ticker.astro'
       </div>
 
   
-      <!-- Menu para moviles -->
-      <div class="menu-icon md:hidden">
-        <svg
-          class="h-6 w-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </div>
-  
-      <!-- Menu desplegable -->
-      <ul
-        class="absolute bg-zinc-50 top-16 left-0 p-5 rounded-b-md w-full flex flex-col gap-4 shadow-lg hidden md:hidden"
-      >
-        <li><a class="hover:text-teal-600" href="/">Inicio</a></li>
-        <li><a class="hover:text-teal-600" href="/about">Nosotros</a></li>
-        <li><a class="hover:text-teal-600" href="https://w.app/Ktl6X9" target="_blank">Catalogo</a></li>
-      </ul>
+      <MenuMobile client:load/>
   
       <!-- Menu para escritorio -->
       <ul class="flex gap-6 mb-0 hidden md:flex h-full items-center">
@@ -84,11 +62,4 @@ import Ticker from './Ticker.astro'
 
   </style>
   
-  <script>
-    const menuIcon = document.querySelector(".menu-icon");
-    const menu = document.querySelector("ul");
-  
-    menuIcon.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
-  </script>
+ 

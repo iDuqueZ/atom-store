@@ -19,7 +19,6 @@ const responseData = await dataReq.json();
 
   // Verificar si responseData.records es un array
   if (!Array.isArray(responseData.records)) {
-    console.error('La respuesta de la API no contiene un array válido.');
     return null; // O muestra un mensaje de error, o devuelve algo según tu necesidad
   }
 
@@ -30,11 +29,10 @@ const responseData = await dataReq.json();
 
     //Validar si tiene file
     if (banner.file === undefined) {
-      console.error('El banner no tiene archivo');
       return null; // O muestra un mensaje de error, o devuelve algo según tu necesidad
     }
 
-    console.log (banner.file.map(file => file.url) ); 
+    // console.log (banner.file.map(file => file.url) ); 
   })
 
 const slides: CarouselSlideType[] = banners.map(banner => ({
