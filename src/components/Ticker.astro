@@ -1,0 +1,84 @@
+<div class="ticker-wrap">
+  <div class="ticker text-sm">
+    <div class="ticker__item">¡🚚📦 Envios <b>Gratis</b> a Todo Cali 📦🚚!</div>
+    <div class="ticker__item"><b>25%</b> DE DESCUENTO - PROMOCIÓN DE APERTURA</div>
+    <div class="ticker__item">¡Envios Gratis a Todo Cali!</div>
+    <div class="ticker__item">25% OFF PROMOCION DE APERTURA</div>
+    <!-- <div class="ticker__item"></div>
+      <div class="ticker__item"></div> -->
+  </div>
+</div>
+
+<style>
+  @-webkit-keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+  @keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+  .ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    height: fit-content;
+    background-color: #242424;
+    color: white;
+    padding-left: 100%;
+    box-sizing: content-box;
+  }
+
+  .ticker {
+    display: inline-block;
+    /* height: 24px;
+    line-height: 24px; */
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: 30s;
+    animation-duration: 30s;
+  }
+
+  .ticker__item {
+    display: inline-block;
+
+    padding: 0 2rem;
+    /* font-size: 2rem; */
+    color: white;
+  }
+
+  body {
+    padding-bottom: 5rem;
+  }
+
+  h1,
+  h2,
+  p {
+    padding: 0 5%;
+  }
+</style>
