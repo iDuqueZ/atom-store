@@ -56,10 +56,10 @@ export default function App() {
       <div className='grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5'>
         {/* // aqui van los skeleton loaders */}
         <div className="animate-pulse bg-gray-300 h-96 w-60"></div>
-        <div className="animate-pulse bg-gray-300 h-96 w-60"></div>
-        <div className="animate-pulse bg-gray-300 h-96 w-60"></div>
-        <div className="animate-pulse bg-gray-300 h-96 w-60"></div>
-        <div className="animate-pulse bg-gray-300 h-96 w-60"></div>
+        <div className="animate-pulse bg-gray-300 h-96 w-60 hidden md:block"></div>
+        <div className="animate-pulse bg-gray-300 h-96 w-60 hidden md:block"></div>
+        <div className="animate-pulse bg-gray-300 h-96 w-60 hidden md:block"></div>
+        <div className="animate-pulse bg-gray-300 h-96 w-60 hidden md:block"></div>
       </div>  
     </>
     );
