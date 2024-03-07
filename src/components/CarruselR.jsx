@@ -53,7 +53,7 @@ function UncontrolledExample() {
             <img
               src={slide.img}
               loading="lazy"
-              className="d-block w-100 object-cover h-[60vh] aspect-videod"
+              className="d-block w-100 object-cover h-[60vh] aspect-video"
               alt={slide.alt}
             />
           </Carousel.Item>

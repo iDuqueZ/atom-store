@@ -1,17 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import CarruselR from '../components/CarruselR.jsx';
-import CarruselMobile from '../components/CarruselMobile.jsx';
+import CarruselR from '../components/Carrusel.astro';
+import CarruselMobile from '../components/CarruselMobile.astro';
 import Vitrina from '../components/UltimaColecion.jsx';
 ---
 
 <Layout title="ATOM STORE | TIENDA Y ESTAMPADO DE CAMISETAS">
 	<main>
 		<div class="hidden md:block">
-			<CarruselR client:load/>
+			<CarruselR/>
 		</div>
 		<div class="block md:hidden">
-			<CarruselMobile client:load/>
+			<CarruselMobile/>
 		</div>
 		
 
