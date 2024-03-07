@@ -99,7 +99,9 @@ export default function App() {
                 <ProductCard
                   img={product.img}
                   name={product.name}
+                  description={product.description}
                   price={product.price}
+                  promo={product.promo}
                   link={product.link}
                 />
               </div>
