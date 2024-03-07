@@ -1,6 +1,14 @@
 import '../styles/custom.css';
 
 const ProductCard = ({ img, name, description, price, promo, link }) => {
+
+
+  function formatearPrecio(precio) {
+    // Utiliza el método toLocaleString con el parámetro 'es' para formato en español
+    return precio.toLocaleString('es');
+  }
+  
+
   return (
     <div className="rounded-lg border shadow-sm relative">
       <div className='absolute w-fit top-2 z-50'>
@@ -24,9 +32,9 @@ const ProductCard = ({ img, name, description, price, promo, link }) => {
         </div>
         <div className="flex flex-col gap-1">
           {/* Real Price */}
-          <div className="text-gray-400 text-xs w-full text-right px-1 line-through">$ {price}</div>
+          <div className="text-gray-400 text-xs w-full text-right px-1 line-through">$ {formatearPrecio(price)}</div>
           {/* Discount Price */}
-          <div className="font-semibold text-base w-full text-right px-1">$ {price - price * promo}</div>
+          <div className="font-semibold text-base w-full text-right px-1">$ {formatearPrecio(price - price * promo)}</div>
           
           <a
             href={link}
